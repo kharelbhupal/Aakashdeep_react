@@ -1,0 +1,294 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background-color: var(--bg-primary);
+  background-image:
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(100, 255, 218, 0.05) 0%,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(93, 159, 255, 0.05) 0%,
+      transparent 30%
+    );
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+
+h3 {
+  font-size: clamp(1rem, 1vw, 1rem);
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+a {
+  text-decoration: none;
+}
+.main-container {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+    url("./assets/cover.png");
+
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.header-container {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px 40px;
+  box-sizing: border-box;
+  border-radius: 80px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+.logo-container {
+  display: flex;
+  align-items: center; /* Vertically centers the logo with the text block */
+  gap: 16px; /* Spaces the logo away from the text block */
+}
+
+.logo-container img {
+  height: 50px; /* Set your preferred height */
+  width: auto; /* Maintains correct proportions */
+  object-fit: contain; /* Prevents stretching or squishing */
+}
+
+/* 1. Target the text container implicitly or explicitly if wrapped */
+.logo-container span,
+.logo-container h2 {
+  font-weight: 600;
+  display: block; /* Forces each text element onto its own line */
+  margin: 0; /* Clears default spacing */
+}
+
+/* 2. Style the top text */
+.logo-container span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px; /* Makes 'AAKASHDEEP' stand out */
+  color: #333333;
+}
+
+/* 3. Style the bottom text */
+.logo-container h2 {
+  font-size: 1rem; /* Slightly smaller for hierarchy */
+  color: #e47200;
+  text-transform: uppercase;
+}
+
+/* Groups the list and the button horizontally */
+.navigation-group {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* Space between the link list and the button */
+}
+
+/* Lays out the individual list items side-by-side */
+.link-container {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between each link text */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Individual list item styles */
+.nav-item {
+  background-color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+.nav-item:hover {
+  color: #e47200;
+}
+
+/* Modern styling for your contact button */
+.contact-button {
+  padding: 10px 20px;
+  background-color: #12263a; /* Professional Blue */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.contact-button:hover {
+  color: #ffa500;
+}
+/* Hero Container Part */
+.hero-container {
+  width: min(90%, 1200px);
+  min-height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  margin: 0 auto;
+  padding: clamp(2rem, 3vw, 6rem) 0;
+}
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+
+  padding: 0.7rem 2rem;
+
+  border-radius: 999px;
+
+  background: rgba(255, 165, 0, 0.15);
+  border: 1px solid rgba(255, 165, 0, 0.3);
+
+  color: #ffa500;
+
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  margin-bottom: 1.5rem;
+}
+
+.hero-container h1 {
+  font-size: clamp(1rem, 6vw, 3.8rem);
+  line-height: 1.05;
+  font-weight: 800;
+  max-width: 900px;
+  color: white;
+}
+
+.hero-container h1 span {
+  color: #ffa500;
+}
+
+.hero-container p {
+  margin-top: 1rem;
+  max-width: 650px;
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.two-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 1rem 2rem;
+  border-radius: 2px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background: #12263a;
+  color: white;
+  border: none;
+}
+
+.primary-btn:hover {
+  background: #e69000;
+  transform: translateY(-3px);
+}
+
+.secondary-btn {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.secondary-btn:hover {
+  background: white;
+  color: #12263a;
+}
+
+.showcase {
+  display: flex;
+  gap: clamp(2rem, 6vw, 5rem);
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.showcase div {
+  border: 3px solid rgba(255, 255, 255, 0.4);
+
+  padding: 1rem 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.showcase h3 {
+  font-size: clamp(2rem, 3vw, 3rem);
+  color: #ffa500;
+}
+
+.showcase span {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+}
