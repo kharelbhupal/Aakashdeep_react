@@ -28,7 +28,7 @@ export default function Services() {
   return (
     <div className="service-container">
       <div className="text-part">
-        <span>What We Offer</span>
+        <span className="section-badge">What We Offer</span>
         <h2>Comprehensive Engineering Services</h2>
         <p>
           From concept to completion, we deliver innovative solutions across all

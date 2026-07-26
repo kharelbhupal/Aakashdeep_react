@@ -14,7 +14,7 @@ export default function Team() {
     <section className="team-container" id="team">
       <div className="team-wrapper">
         <div className="team-text">
-          <span>Our Experts</span>
+          <span className="section-badge">Our Experts</span>
 
           <h2>Meet Our Engineering Team</h2>
 

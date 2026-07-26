@@ -25,7 +25,7 @@ export default function Projects() {
     <section className="projects-container" id="projects">
       <div className="project-wrapper">
         <div className="text-part">
-          <span>Our Portfolio</span>
+          <span className="section-badge">Our Portfolio</span>
 
           <h2>Featured Engineering Projects</h2>
 
