@@ -24,7 +24,9 @@ export default function Header() {
 
       <div className="navigation-group">
         <ul className="link-container">{linkElement}</ul>
-        <button className="contact-button">Contact Us</button>
+        <button className="contact-button">
+          <a href="#contact"> Contact Us</a>
+        </button>
       </div>
     </div>
   );

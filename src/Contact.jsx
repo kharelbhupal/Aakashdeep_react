@@ -1,6 +1,48 @@
 import QR from "./assets/social/aakashdeep.png";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
+
+const mailKey = import.meta.env.VITE_ACCESS_KEY;
+const siteKey = import.meta.env.VITE_SITE_KEY;
 
 export default function Contact() {
+  const [result, setResult] = useState("");
+  const [loading, setLoading] = useState(false);
+  const { register, handleSubmit, setValue } = useForm();
+
+  const onHCaptchaChange = (token) => {
+    setValue("h-captcha-response", token);
+  };
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+
+    setLoading(true);
+
+    const formData = new FormData(event.target);
+    formData.append("access_key", mailKey);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("✅ Form submitted successfully!");
+        event.target.reset();
+      } else {
+        setResult(`❌ ${data.message}`);
+      }
+    } catch (error) {
+      setResult("❌ Network error. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <section className="contact-section" id="contact">
       <div className="contact-wrapper">
@@ -15,28 +57,19 @@ export default function Contact() {
             hours with initial thoughts and a proposed approach.
           </p>
 
-          <form className="contact-form">
-            <input
-              type="hidden"
-              name="access_key"
-              value="8f6dee23-5f8c-4d73-bdcd-ea5bfd1e723b"
-            />
-
+          <form className="contact-form" onSubmit={onSubmit}>
             <input type="text" name="name" placeholder="Full Name" required />
-
             <input
               type="email"
               name="email"
               placeholder="Email Address"
               required
             />
-
             <input
               type="text"
               name="company"
               placeholder="Company (Optional)"
             />
-
             <select name="service" required>
               <option value="">Select Service Required</option>
               <option value="highways">Highway & Road Design</option>
@@ -46,26 +79,26 @@ export default function Contact() {
               <option value="bim">BIM & Digital Engineering</option>
               <option value="other">Other</option>
             </select>
-
             <textarea
               name="message"
               rows="6"
               placeholder="Project Description"
               required
             />
-
-            {/* hCaptcha */}
-            <div
-              className="h-captcha"
-              data-captcha="true"
-              data-theme="dark"
-            ></div>
-
-            <button type="submit" className="send-btn">
-              Send Message
+            <HCaptcha
+              sitekey={siteKey}
+              reCaptchaCompat={false}
+              onVerify={onHCaptchaChange}
+            />
+            <button type="submit" className="send-btn" disabled={loading}>
+              {loading ? "Sending..." : "Send Message"}
             </button>
-
-            <div className="form-status"></div>
+            <div
+              className="form-status"
+              style={{ marginTop: "10px", textAlign: "center" }}
+            >
+              {result}
+            </div>
           </form>
         </div>
 

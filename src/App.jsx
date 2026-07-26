@@ -7,6 +7,7 @@ import Team from "./Team";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import Social from "./Social";
+import Portfolio from "./Portfolio";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Contact />
       <Footer />
       <Social />
+      <Portfolio />
     </>
   );
 }

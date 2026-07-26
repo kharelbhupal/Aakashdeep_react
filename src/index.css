@@ -27,6 +27,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: "Inter", system-ui, sans-serif;
   color: var(--text);
@@ -451,7 +452,6 @@ button {
 .project-wrapper {
   width: min(92%, var(--max-width));
   margin-inline: auto;
-
   display: grid;
   grid-template-columns: 0.9fr 1.3fr;
   gap: clamp(2rem, 5vw, 5rem);
@@ -856,7 +856,7 @@ button {
   margin-top: 1rem;
   padding: 1rem;
   border: none;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   background: var(--accent);
   color: #111;
   font-weight: 700;
