@@ -1,28 +1,30 @@
-import "./App.css";
+import { Routes, Route } from "react-router-dom";
+
 import Header from "./Header";
-import Hero from "./Hero";
-import Services from "./Services";
-import Projects from "./Projects";
-import Team from "./Team";
-import Contact from "./Contact";
 import Footer from "./Footer";
 import Social from "./Social";
+
+import Home from "./Home";
+import AllServices from "./AllServices";
 import Portfolio from "./Portfolio";
 
 function App() {
   return (
     <>
-      <div className="main-container">
+      {/* Header appears on every page */}
+      <div className="navbar">
         <Header />
-        <Hero />
       </div>
-      <Services />
-      <Projects />
-      <Team />
-      <Contact />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<AllServices />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+      </Routes>
+
+      {/* Footer appears on every page */}
       <Footer />
       <Social />
-      <Portfolio />
     </>
   );
 }

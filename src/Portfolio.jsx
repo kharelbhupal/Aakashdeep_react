@@ -4,13 +4,12 @@ import ourExpert from "./data/PORTFOLIO_EXPERT.JS";
 import portfolio from "./data/PORTFOLIO.JS";
 import projectStats from "./data/PORT_STATS.JS";
 import "./portfolio.css";
-import Footer from "./Footer";
 
 export default function Projects() {
   const filterElement = projectFilters.map((item) => {
     return (
       <button
-        className="filter-btn active"
+        className="portfolio-filter-btn active"
         data-filter={item.value}
         key={item.id}
       >
@@ -130,13 +129,12 @@ export default function Projects() {
               free consultation.
             </p>
 
-            <a href="/#contact" className="btn-primary">
+            <a href="/#contact" className="portfolio-btn-primary">
               <i className="fas fa-comment-dots"></i>
               Start a Conversation
             </a>
           </div>
         </div>
-        <Footer />
       </section>
     </>
   );
