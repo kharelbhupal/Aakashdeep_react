@@ -19,7 +19,7 @@ export default function Services() {
           {/* Header */}
           <div className="allservices-page-header">
             <div className="allservices-kicker">What We Offer</div>
-            <h1>Our Services</h1>
+            <h1>Our Services.</h1>
             <p>
               From concept to completion, we deliver innovative solutions across
               residential, commercial, industrial, engineering and
