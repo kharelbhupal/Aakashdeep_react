@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import allServiceItems from "./data/ALLSERVICE_ITEMS";
-import allButtonCategories from "./data/ALLSERVICES_BUTTON";
+import allServiceItems from "./data/ALLSERVICE_ITEMS.JS";
+import allButtonCategories from "./data/ALLSERVICES_BUTTON.JS";
 import "./allservice.css";
 import Footer from "./Footer";
 import Vastu from "./assets/Vastu.png";
