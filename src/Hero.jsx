@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Hero() {
   return (
     <section className="hero-container">
@@ -14,8 +16,12 @@ export default function Hero() {
       </p>
 
       <div className="two-buttons">
-        <button className="primary-btn">View Our Projects</button>
-        <button className="secondary-btn">Contact Our Team</button>
+        <button className="primary-btn">
+          <Link to={"/portfolio"}> View Our Projects</Link>
+        </button>
+        <button className="secondary-btn">
+          <a href="/#contact"> Contact Our Team</a>
+        </button>
       </div>
 
       <div className="showcase">

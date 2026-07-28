@@ -20,32 +20,33 @@ export default function Header() {
   return (
     <div className="header-container">
       {/* Logo */}
-      <div className="logo-container">
-        <img src={Logo} alt="logo" />
-        <div className="text-group">
-          <Link to={"/"}>
-            <span>AAKASHDEEP</span>
-            <h2>CONSTRUCTION & ENGINEERING</h2>
-          </Link>
+      <div className="navbar-container">
+        <div className="logo-container">
+          <img src={Logo} alt="logo" />
+          <div className="text-group">
+            <Link to={"/"}>
+              <span>AAKASHDEEP</span>
+              <h2>CONSTRUCTION & ENGINEERING</h2>
+            </Link>
+          </div>
         </div>
-      </div>
 
-      {/* Hidden Checkbox for Hamburger Toggle */}
-      <input type="checkbox" id="nav-toggle" className="nav-toggle" />
+        {/* Hidden Checkbox for Hamburger Toggle */}
+        <input type="checkbox" id="nav-toggle" className="nav-toggle" />
 
-      {/* Hamburger Icon - Label */}
-      <label htmlFor="nav-toggle" className="nav-toggle-label">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-
-      {/* Navigation */}
-      <div className="navigation-group">
-        <ul className="link-container">{linkElement}</ul>
-        <button className="contact-button">
-          <a href="#contact">Contact Us</a>
-        </button>
+        {/* Hamburger Icon - Label */}
+        <label htmlFor="nav-toggle" className="nav-toggle-label">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        {/* Navigation */}
+        <div className="navigation-group">
+          <ul className="link-container">{linkElement}</ul>
+          <button className="contact-button">
+            <a href="/#contact">Contact Us</a>
+          </button>
+        </div>
       </div>
 
       {/* Optional: Overlay to close menu when clicking outside */}

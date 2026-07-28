@@ -1,0 +1,599 @@
+/* ==========================
+   ABOUT PAGE
+========================== */
+
+.about-section {
+  padding: 6rem 0;
+  background: #f8fafc;
+}
+
+.about-container {
+  width: min(92%, var(--max-width));
+  margin: 0 auto;
+}
+
+/* ==========================
+   PAGE HEADER
+========================== */
+
+.page-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.page-header .kicker {
+  display: inline-block;
+
+  padding: 0.55rem 1rem;
+
+  background: rgba(223, 150, 14, 0.12);
+
+  color: var(--accent);
+
+  border-radius: var(--border-radius);
+
+  font-weight: 700;
+
+  margin-bottom: 1rem;
+}
+
+.page-header h1 {
+  font-size: clamp(2.3rem, 5vw, 3.8rem);
+
+  color: var(--text);
+
+  margin-bottom: 1rem;
+}
+
+.page-header p {
+  max-width: 720px;
+
+  margin: auto;
+
+  color: #64748b;
+
+  line-height: 1.8;
+}
+
+/* ==========================
+   FILTERS
+========================== */
+
+.about-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.filter-btn {
+  border: none;
+  cursor: pointer;
+  padding: 0.9rem 1.7rem;
+  border-radius: var(--border-radius);
+  background: white;
+  color: var(--text);
+  font-weight: 600;
+  transition: 0.35s;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.8);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--accent);
+
+  color: #111;
+
+  transform: translateY(-4px);
+}
+
+/* ==========================
+   CONTENT
+========================== */
+
+.about-content {
+  display: none;
+  margin-bottom: 6rem;
+}
+
+.about-content.active {
+  display: block;
+}
+
+/* ==========================
+   PROFILE SECTIONS
+========================== */
+
+.company-profile-container {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4rem;
+}
+
+.losses-section,
+.why-section,
+.vision-card,
+.mission-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.8);
+}
+
+.losses-section h3,
+.why-section h3,
+.vision-card h3,
+.mission-card h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--text);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 2.5rem;
+}
+
+.losses-section i,
+.why-section i,
+.vision-card i,
+.mission-card i {
+  color: var(--accent);
+}
+
+/* ==========================
+   LOSS GRID
+========================== */
+
+.losses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.loss-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.3rem;
+  background: #f8fafc;
+  border-radius: var(--border-radius);
+  transition: 0.35s;
+}
+
+.loss-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.1);
+}
+
+.loss-item i {
+  min-width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 165, 0, 0.12);
+  color: var(--accent);
+  border-radius: 50%;
+}
+
+.loss-item span {
+  color: #64748b;
+
+  line-height: 1.7;
+}
+
+/* ==========================
+   WHY GRID
+========================== */
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.why-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #f8fafc;
+  padding: 1.3rem;
+  border-radius: var(--border-radius);
+  transition: 0.35s;
+}
+
+.why-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.why-item i {
+  color: var(--accent);
+  font-size: 1.4rem;
+}
+
+.why-item span {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ==========================
+   VISION MISSION
+========================== */
+
+.vision-mission {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 6rem;
+}
+
+.vision-card p,
+.mission-list li {
+  color: #64748b;
+  line-height: 1.8;
+}
+
+.mission-list {
+  padding: 0;
+
+  list-style: none;
+}
+
+.mission-list li {
+  display: flex;
+
+  gap: 1rem;
+
+  margin-bottom: 1rem;
+}
+
+.mission-list i {
+  margin-top: 5px;
+}
+/* ==========================
+   TEAM SECTION
+========================== */
+
+.team-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+/* ==========================
+   SECTION HEADER
+========================== */
+
+.section-header {
+  text-align: center;
+
+  max-width: 720px;
+
+  margin: 0 auto 3rem;
+}
+
+.section-subtitle {
+  color: var(--accent);
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 0.8rem;
+}
+
+.section-header h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+
+  color: var(--text);
+
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  color: #64748b;
+
+  line-height: 1.8;
+}
+
+/* ==========================
+   CEO CARD
+========================== */
+
+.ceo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.team-card-large {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.8);
+  transition: 0.35s;
+  text-align: center;
+}
+
+.team-card-large:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.15);
+}
+
+.ceo .team-card-large {
+  max-width: 500px;
+}
+
+/* ==========================
+   TEAM IMAGES
+========================== */
+
+.team-avatar-large {
+  width: 150px;
+
+  height: 150px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  margin: 0 auto 1.5rem;
+
+  border: 5px solid rgba(255, 165, 0, 0.15);
+}
+
+.team-card-large h3,
+.team-card-large h4 {
+  color: var(--text);
+
+  margin-bottom: 0.5rem;
+
+  font-size: 1.35rem;
+}
+
+.team-role-large {
+  color: var(--accent-dark);
+
+  font-weight: 700;
+
+  margin-bottom: 1rem;
+}
+
+/* ==========================
+   EXPERTISE TAGS
+========================== */
+
+.expertise-tags {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 0.5rem;
+
+  margin-bottom: 1.2rem;
+}
+
+.expertise-tag {
+  background: rgba(255, 165, 0, 0.12);
+  color: var(--accent-dark);
+  padding: 0.45rem 0.8rem;
+  border-radius: var(--border-radius);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.team-card-large p {
+  color: #64748b;
+  line-height: 1.8;
+}
+
+/* ==========================
+   TEAM GRIDS
+========================== */
+
+.leadership-grid,
+.team-grid-expanded {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* ==========================
+   SOCIAL LINKS
+========================== */
+
+.team-social {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.team-social-link {
+  width: 40px;
+
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 165, 0, 0.12);
+
+  color: var(--accent);
+
+  transition: 0.35s;
+}
+
+.team-social-link:hover {
+  background: var(--accent);
+  color: #111;
+  transform: translateY(-4px);
+}
+
+/* ==========================
+   CAREERS SECTION
+========================== */
+
+.careers-container {
+  display: flex;
+
+  justify-content: center;
+}
+
+.coming-soon-card {
+  width: min(700px, 100%);
+
+  text-align: center;
+
+  background: white;
+
+  padding: 3rem;
+
+  border-radius: var(--border-radius);
+
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.coming-soon-card > i {
+  font-size: 3rem;
+
+  color: var(--accent);
+
+  margin-bottom: 1.5rem;
+}
+
+.coming-soon-card h3 {
+  color: var(--text);
+
+  font-size: 2rem;
+
+  margin-bottom: 1rem;
+}
+
+.coming-soon-card p {
+  color: #64748b;
+
+  line-height: 1.8;
+}
+
+.job-alert {
+  margin-top: 2rem;
+
+  padding: 2rem;
+
+  background: #f8fafc;
+
+  border-radius: var(--border-radius);
+}
+
+.job-alert i {
+  color: var(--accent);
+
+  font-size: 2rem;
+}
+
+.btn-primary {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.7rem;
+
+  padding: 1rem 2rem;
+
+  background: var(--accent);
+
+  color: #111;
+
+  text-decoration: none;
+
+  border-radius: var(--border-radius);
+
+  font-weight: 700;
+
+  transition: 0.35s;
+}
+
+.btn-primary:hover {
+  background: var(--accent-dark);
+
+  transform: translateY(-4px);
+}
+
+/* ==========================
+   ANIMATION
+========================== */
+
+.animate-on-scroll {
+  animation: fadeUp 0.7s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 1024px) {
+  .leadership-grid,
+  .team-grid-expanded {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 4rem 0;
+  }
+
+  .losses-section,
+  .why-section,
+  .vision-card,
+  .mission-card {
+    padding: 1.5rem;
+  }
+
+  .leadership-grid,
+  .team-grid-expanded {
+    grid-template-columns: 1fr;
+  }
+
+  .team-avatar-large {
+    width: 120px;
+
+    height: 120px;
+  }
+
+  .coming-soon-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .expertise-tags {
+    justify-content: center;
+  }
+}

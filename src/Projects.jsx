@@ -34,7 +34,7 @@ export default function Projects() {
             approach to complex engineering challenges.
           </p>
 
-          <button className="view-projects">View All Projects</button>
+          {/* <button className="view-projects">View All Projects</button> */}
         </div>
 
         <div className="projects-grid">{projectElements}</div>

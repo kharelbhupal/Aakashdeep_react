@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import projectFilters from "./data/PORTFOLIO_FILTERS.JS";
 import ourExpert from "./data/PORTFOLIO_EXPERT.JS";
 import portfolio from "./data/PORTFOLIO.JS";
@@ -6,67 +6,73 @@ import projectStats from "./data/PORT_STATS.JS";
 import "./portfolio.css";
 
 export default function Projects() {
-  const filterElement = projectFilters.map((item) => {
-    return (
-      <button
-        className="portfolio-filter-btn active"
-        data-filter={item.value}
-        key={item.id}
-      >
-        {item.label}
-      </button>
-    );
-  });
+  const [selectedFilter, setSelectedFilter] = useState("all");
 
-  const portFolioElement = portfolio.map((item) => {
-    return (
-      <div
-        key={item.id}
-        className="project-card animate-on-scroll"
-        data-category={item.category}
-      >
-        <div className="project-image">
-          <img src={item.image} alt={item.title} />
-          <span className="concept-badge">{item.badge}</span>
+  // Filter Portfolio
+  const filteredPortfolio =
+    selectedFilter === "all"
+      ? portfolio
+      : portfolio.filter((item) => item.category === selectedFilter);
+
+  // Filter Buttons
+  const filterElement = projectFilters.map((item) => (
+    <button
+      key={item.id}
+      className={`portfolio-filter-btn ${
+        selectedFilter === item.value ? "active" : ""
+      }`}
+      onClick={() => setSelectedFilter(item.value)}
+    >
+      {item.label}
+    </button>
+  ));
+
+  // Portfolio Cards
+  const portFolioElement = filteredPortfolio.map((item) => (
+    <div
+      key={item.id}
+      className="project-card animate-on-scroll"
+      data-category={item.category}
+    >
+      <div className="project-image">
+        <img src={item.image} alt={item.title} />
+        <span className="concept-badge">{item.badge}</span>
+      </div>
+
+      <div className="project-content">
+        <div className="project-tag">{item.tag}</div>
+
+        <h4>{item.title}</h4>
+
+        <p className="text-muted">{item.description}</p>
+
+        <div className="project-details">
+          {item.details.map((detail, index) => (
+            <span key={index}>
+              <i className={`fas ${detail.icon}`}></i> {detail.text}
+            </span>
+          ))}
         </div>
-
-        <div className="project-content">
-          <div className="project-tag">{item.tag}</div>
-
-          <h4>{item.title}</h4>
-
-          <p className="text-muted">{item.description}</p>
-
-          <div>
-            {item.details.map((detail, index) => (
-              <span key={index}>
-                <i className={`fas ${detail.icon}`}></i> {detail.text}
-              </span>
-            ))}
-          </div>
-        </div>
       </div>
-    );
-  });
+    </div>
+  ));
 
-  const expertiseElement = ourExpert.map((item) => {
-    return (
-      <div className="expertise-item animate-on-scroll" key={item.id}>
-        <i className={`fas ${item.icon}`}></i>
-        <h5>{item.title}</h5>
-        <p>{item.description}</p>
-      </div>
-    );
-  });
+  // Expertise
+  const expertiseElement = ourExpert.map((item) => (
+    <div className="expertise-item animate-on-scroll" key={item.id}>
+      <i className={`fas ${item.icon}`}></i>
+      <h5>{item.title}</h5>
+      <p>{item.description}</p>
+    </div>
+  ));
 
-  const statsElement = projectStats.map((item) => {
-    return (
-      <div className="stat-item" key={item.id}>
-        <div className="stat-number">{item.number}</div>
-        <div className="stat-label">{item.label}</div>
-      </div>
-    );
-  });
+  // Stats
+  const statsElement = projectStats.map((item) => (
+    <div className="stat-item" key={item.id}>
+      <div className="stat-number">{item.number}</div>
+      <div className="stat-label">{item.label}</div>
+    </div>
+  ));
 
   return (
     <>
@@ -91,7 +97,7 @@ export default function Projects() {
             {filterElement}
           </div>
 
-          {/* Projects Grid */}
+          {/* Projects */}
           <div
             className="projects-grid-expanded animate-on-scroll"
             id="projectsGrid"
@@ -99,7 +105,7 @@ export default function Projects() {
             {portFolioElement}
           </div>
 
-          {/* Our Expertise */}
+          {/* Expertise */}
           <div className="top-line animate-on-scroll">
             <div className="section-header">
               <div className="section-subtitle">Our Capabilities</div>
@@ -115,7 +121,7 @@ export default function Projects() {
             <div className="expertise-grid">{expertiseElement}</div>
           </div>
 
-          {/* Project Stats */}
+          {/* Stats */}
           <div className="project-stats animate-on-scroll">
             <div className="stats-grid-large">{statsElement}</div>
           </div>

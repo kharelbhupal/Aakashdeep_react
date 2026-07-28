@@ -1,4 +1,5 @@
 import TEAM from "./data/TEAM";
+import { Link } from "react-router-dom";
 
 export default function Team() {
   const teamElements = TEAM.map((member, index) => (
@@ -23,7 +24,9 @@ export default function Team() {
             innovative thinking to deliver exceptional results.
           </p>
 
-          <button className="view-team">View All Team Members</button>
+          <button className="view-team">
+            <Link to={"/about-us"}> View All Team Members</Link>
+          </button>
         </div>
 
         <div className="team-grid">{teamElements}</div>

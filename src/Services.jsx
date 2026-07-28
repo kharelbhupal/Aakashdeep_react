@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faRoad,
@@ -35,7 +36,7 @@ export default function Services() {
           aspects of civil and structural engineering.
         </p>
         <button className="view-services">
-          CLICK HERE TO SEE ALL SERVICES.
+          <Link to={"/services"}>CLICK HERE TO SEE ALL SERVICES.</Link>
         </button>
       </div>
       <div className="card-part">{cardElement}</div>

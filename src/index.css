@@ -27,7 +27,9 @@
 html {
   scroll-behavior: smooth;
 }
-
+#contact {
+  scroll-margin-top: 90px;
+}
 body {
   font-family: "Inter", system-ui, sans-serif;
   color: var(--text);
@@ -75,7 +77,12 @@ button {
   padding: 0.1rem 0;
   transition: all 0.3s ease;
 }
-
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -95,7 +102,7 @@ button {
   display: flex;
   align-items: center;
   gap: clamp(0.5rem, 1.5vw, 1rem);
-  flex-shrink: 0;
+  min-width: 0;
 }
 
 .logo-container img {
@@ -130,12 +137,13 @@ button {
 .nav-toggle-label {
   display: none;
   flex-direction: column;
-  justify-content: center; /* ← important */
+  justify-content: center;
+  align-items: center;
   gap: 5px;
   cursor: pointer;
   padding: 6px;
-  z-index: 1001;
   margin-left: auto;
+  z-index: 1001;
 }
 
 .nav-toggle-label span {
@@ -218,9 +226,6 @@ button {
   }
 
   .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
     padding: 0.55rem 0.9rem; /* slightly more vertical padding */
     border-radius: 12px;
     min-height: 50px;
@@ -304,6 +309,32 @@ button {
   .nav-toggle:checked ~ .nav-overlay {
     display: block;
   }
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo-container {
+    flex: 1;
+  }
+
+  .text-group {
+    min-width: 0;
+  }
+
+  .text-group a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    line-height: 1.1;
+  }
+
+  .nav-toggle-label {
+    display: flex;
+    flex-shrink: 0;
+  }
 }
 
 /* ============================================
@@ -312,6 +343,21 @@ button {
 @media (max-width: 480px) {
   .navbar {
     padding: 0.3rem 0.3rem 0 0.3rem;
+  }
+  .navbar-container {
+    gap: 0.75rem;
+  }
+
+  .logo-container img {
+    height: 24px;
+  }
+
+  .logo-container span {
+    font-size: 0.75rem;
+  }
+
+  .logo-container h2 {
+    font-size: 0.55rem;
   }
 
   .header-container {
