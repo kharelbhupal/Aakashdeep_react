@@ -8,6 +8,7 @@ import AllServices from "./AllServices";
 import Portfolio from "./Portfolio";
 import AboutUs from "./AboutUs";
 import InfoCenter from "./InfoCenter";
+import PageNotFound from "./PageNotFound";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/info" element={<InfoCenter />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
 
       {/* Footer appears on every page */}
