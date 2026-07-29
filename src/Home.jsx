@@ -5,6 +5,7 @@ import Services from "./Services";
 import Projects from "./Projects";
 import Team from "./Team";
 import Contact from "./Contact";
+import Showcase from "./Showcase";
 
 export default function Home() {
   useEffect(() => {
@@ -26,6 +27,7 @@ export default function Home() {
       <Services />
       <Projects />
       <Team />
+      <Showcase />
       <Contact />
     </>
   );
