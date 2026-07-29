@@ -23,10 +23,9 @@ export default function Team() {
             Our team of chartered engineers combines decades of experience with
             innovative thinking to deliver exceptional results.
           </p>
-
-          <button className="view-team">
-            <Link to={"/about-us"}> View All Team Members</Link>
-          </button>
+          <Link to={"/about-us"}>
+            <button className="view-team">View All Team Members</button>
+          </Link>
         </div>
 
         <div className="team-grid">{teamElements}</div>

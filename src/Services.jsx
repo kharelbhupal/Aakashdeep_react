@@ -35,9 +35,11 @@ export default function Services() {
           From concept to completion, we deliver innovative solutions across all
           aspects of civil and structural engineering.
         </p>
-        <button className="view-services">
-          <Link to={"/services"}>CLICK HERE TO SEE ALL SERVICES.</Link>
-        </button>
+        <Link to={"/services"}>
+          <button className="view-services">
+            CLICK HERE TO SEE ALL SERVICES.
+          </button>
+        </Link>
       </div>
       <div className="card-part">{cardElement}</div>
     </div>

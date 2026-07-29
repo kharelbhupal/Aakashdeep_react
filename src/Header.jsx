@@ -11,9 +11,11 @@ export default function Header() {
 
   const linkElement = link.map((item, index) => {
     return (
-      <li key={index} className="nav-item">
-        <Link to={item.link}>{item.label}</Link>
-      </li>
+      <Link to={item.link}>
+        <li key={index} className="nav-item">
+          {item.label}
+        </li>
+      </Link>
     );
   });
 
@@ -43,9 +45,9 @@ export default function Header() {
         {/* Navigation */}
         <div className="navigation-group">
           <ul className="link-container">{linkElement}</ul>
-          <button className="contact-button">
-            <a href="/#contact">Contact Us</a>
-          </button>
+          <a href="/#contact">
+            <button className="contact-button">Contact Us</button>
+          </a>
         </div>
       </div>
 

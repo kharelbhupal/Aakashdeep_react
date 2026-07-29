@@ -16,12 +16,12 @@ export default function Hero() {
       </p>
 
       <div className="two-buttons">
-        <button className="primary-btn">
-          <Link to={"/portfolio"}> View Our Projects</Link>
-        </button>
-        <button className="secondary-btn">
-          <a href="/#contact"> Contact Our Team</a>
-        </button>
+        <Link to={"/portfolio"}>
+          <button className="primary-btn">View Our Projects</button>
+        </Link>
+        <a href="/#contact">
+          <button className="secondary-btn">Contact Our Team</button>
+        </a>
       </div>
 
       <div className="showcase">
