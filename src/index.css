@@ -413,9 +413,6 @@ button {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
-.nav-toggle:checked ~ .nav-overlay {
-  display: block;
-}
 .navigation-group {
   z-index: 999;          /* higher than overlay */
   position: relative;    /* or fixed / absolute depending on your layout */
