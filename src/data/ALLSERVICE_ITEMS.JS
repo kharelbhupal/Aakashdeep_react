@@ -1,4 +1,5 @@
 const allServiceItem = [
+  // enginnering
   {
     id: 1,
     category: "engineering",
@@ -87,6 +88,7 @@ const allServiceItem = [
       },
     ],
   },
+  // residentional section
   {
     id: 2,
     category: "residential",
@@ -192,6 +194,7 @@ const allServiceItem = [
       },
     ],
   },
+  // commercial section
   {
     id: 3,
     category: "commercial",
@@ -259,6 +262,7 @@ const allServiceItem = [
       },
     ],
   },
+  // industrial section
   {
     id: 4,
     category: "industrial",
@@ -325,6 +329,7 @@ const allServiceItem = [
       },
     ],
   },
+  // infrastructure section
   {
     id: 5,
     category: "infrastructure",
@@ -332,23 +337,13 @@ const allServiceItem = [
     icon: "fa-bridge",
     services: [
       {
-        id: 501,
-        title: "Bridge Engineering",
-        icon: "fa-bridge",
-        tag: "Infrastructure",
-        description:
-          "Safe and durable structural design for all bridge types (RCC, steel, suspension). Designed for traffic load, environmental conditions, and long-term performance. Suitable for highways, rural roads, and river crossings.",
-        image: "./img/bridge.png",
-      },
-      {
         id: 502,
         title: "Public Infrastructure",
         icon: "fa-school",
         tag: "Public Works",
         description:
           "Planning and design for public infrastructure projects. Schools, hospitals, roads, offices, and community buildings. Compliance with government standards, codes, and regulations.",
-        image:
-          "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+        image: "/other/government.png",
       },
     ],
   },
@@ -387,6 +382,7 @@ const allServiceItem = [
 
     services: [],
   },
+  // property valuation section
   {
     id: 7,
     category: "valuation",

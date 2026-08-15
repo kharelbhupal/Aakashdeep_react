@@ -114,7 +114,11 @@ export default function Services() {
               <div className="allservices-grid">
                 {currentCategory.services.map((service) => (
                   <div className="allservices-card" key={service.id}>
-                    <div className="allservices-card-image">
+                    <div
+                      className={`allservices-card-image ${
+                        service.id === 502 ? "toChange" : ""
+                      }`}
+                    >
                       <img src={service.image} alt={service.title} />
                     </div>
 

@@ -136,6 +136,11 @@
   transition: 0.5s;
 }
 
+.toChange img {
+  height: 540px;
+  object-fit: contain;
+}
+
 .allservices-card:hover img {
   transform: scale(1.08);
 }
