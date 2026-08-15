@@ -352,6 +352,7 @@ const allServiceItem = [
       },
     ],
   },
+  // vastu section
   {
     id: 6,
     category: "vastu",
@@ -446,8 +447,7 @@ const allServiceItem = [
         tag: "Consulting",
         description:
           "Professional real estate consulting services including market analysis, feasibility studies, and strategic advisory for property development and investment.",
-        image:
-          "https://images.unsplash.com/photo-1494526585095-c41746248156?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+        image: "/other/realestate.png",
       },
     ],
   },

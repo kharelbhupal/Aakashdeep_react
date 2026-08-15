@@ -46,10 +46,10 @@ export default function Services() {
           <div className="allservices-grid-wrapper">
             <div className="allservices-category">
               <h3>
-                <i
+                {/* <i
                   className={`fas ${currentCategory.icon}`}
                   style={{ marginRight: "1rem" }}
-                ></i>
+                ></i> */}
                 {currentCategory.title}
               </h3>
             </div>
@@ -99,14 +99,14 @@ export default function Services() {
                     निर्माण गर्न प्रतिबद्ध छौं ।
                   </p>
 
-                  <div className="vastu-chart">
+                  {/* <div className="vastu-chart">
                     <h3>Vastu Directions</h3>
                     <p>वास्तु दिशा चार्ट - सन्तुलित ऊर्जाका लागि</p>
                     <img
                       src="./img/vastu-direction-chart.jpg"
                       alt="Vastu Direction Chart"
                     />
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ) : (
