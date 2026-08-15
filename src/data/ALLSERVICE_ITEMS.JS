@@ -419,8 +419,7 @@ const allServiceItem = [
         tag: "Land",
         description:
           "Accurate land valuation services for residential, commercial, and industrial plots. Includes location analysis, market trends, and development potential assessment.",
-        image:
-          "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+        image: "/other/land_val.png",
       },
       {
         id: 704,
@@ -429,8 +428,7 @@ const allServiceItem = [
         tag: "Industrial",
         description:
           "Specialized valuation services for industrial properties including factories, warehouses, manufacturing plants, and cold storage facilities.",
-        image:
-          "https://images.unsplash.com/photo-1486325212027-8081e485255e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+        image: "/other/industry.png",
       },
       {
         id: 705,
@@ -439,8 +437,7 @@ const allServiceItem = [
         tag: "Investment",
         description:
           "Expert valuation for investment properties including rental income analysis, ROI calculations, and market trend assessment for informed investment decisions.",
-        image:
-          "https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?q=80&w=1170&auto=format&fit=crop",
+        image: "/other/investment_property.png",
       },
       {
         id: 706,
