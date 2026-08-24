@@ -1,5 +1,11 @@
 import {
   faRoad,
+  faHome,
+  faBuilding,
+  faIndustry,
+  faCompass,
+  faChartLine,
+  faHardHat,
   faBridge,
   faWater,
   faMountain,
@@ -8,40 +14,40 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 const SERVICES = [
   {
-    service: "Highway & Road Design",
+    service: "Residential Design",
     description:
-      "Alignment optimization, pavement design, junction modelling, and comprehensive traffic assessments for urban and rural infrastructure.",
-    icon: faRoad,
+      "Architectural planning, structural design, and MEP coordination for single-family homes, apartments, and residential complexes.",
+    icon: faHome,
   },
   {
-    service: "Bridge Engineering",
+    service: "Commercial Design",
     description:
-      "Inspection, load rating, refurbishment and new-build design for pedestrian, highway, and railway bridges using advanced analysis tools.",
-    icon: faBridge,
+      "Office buildings, retail spaces, shopping centers, and mixed-use developments with compliance to local building codes and regulations.",
+    icon: faBuilding,
   },
   {
-    service: "Drainage & Flood Mitigation",
+    service: "Industrial Design",
     description:
-      "Sustainable drainage systems (SuDS), attenuation solutions, and hydraulic modelling to manage surface water and prevent flooding.",
-    icon: faWater,
+      "Warehouses, factories, manufacturing plants, and logistics hubs with durable structural systems and efficient operational layouts.",
+    icon: faIndustry,
   },
   {
-    service: "Geotechnical Solutions",
+    service: "Vastu Consultation",
     description:
-      "Retaining walls, soil-nailing, slope stability analysis, and foundation design for challenging ground conditions.",
-    icon: faMountain,
+      "Expert guidance on Vastu Shastra principles for harmonious spatial planning, energy flow optimization, and balanced built environments.",
+    icon: faCompass,
   },
   {
-    service: "BIM & Digital Engineering",
+    service: "Property Valuation",
     description:
-      "Full BIM coordination, 3D modelling, clash detection, and digital twins for efficient project delivery and lifecycle management.",
-    icon: faCube,
+      "Comprehensive real estate appraisal, market analysis, and asset valuation for residential, commercial, and industrial properties.",
+    icon: faChartLine,
   },
   {
-    service: "Structural Assessment",
+    service: "Core Engineering Works",
     description:
-      "Detailed structural analysis, condition surveys, and remediation strategies for existing buildings and infrastructure.",
-    icon: faClipboardCheck,
+      "Foundational engineering services including structural analysis, earthworks, site preparation, and infrastructure development.",
+    icon: faHardHat,
   },
 ];
 
