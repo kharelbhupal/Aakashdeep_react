@@ -1,7 +1,6 @@
 import QR from "./assets/social/aakashdeep.png";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 const mailKey = import.meta.env.VITE_ACCESS_KEY;
 const siteKey = import.meta.env.VITE_SITE_KEY;
@@ -85,11 +84,7 @@ export default function Contact() {
               placeholder="Project Description"
               required
             />
-            <HCaptcha
-              sitekey={siteKey}
-              reCaptchaCompat={false}
-              onVerify={onHCaptchaChange}
-            />
+
             <button type="submit" className="send-btn" disabled={loading}>
               {loading ? "Sending..." : "Send Message"}
             </button>
