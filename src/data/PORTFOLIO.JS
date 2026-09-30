@@ -4,7 +4,7 @@ const projects = [
     category: "residential",
     title: "Modern Luxury Villa",
     tag: "Residential Design",
-    badge: "Concept",
+
     image:
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
     description:
@@ -26,7 +26,7 @@ const projects = [
     category: "commercial",
     title: "Mixed-Use Commercial Complex",
     tag: "Commercial Design",
-    badge: "Concept",
+
     image:
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
     description:
@@ -48,7 +48,7 @@ const projects = [
     category: "sustainable",
     title: "Eco-Friendly Housing Community",
     tag: "Sustainable Design",
-    badge: "Green Design",
+
     image:
       "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
     description:
@@ -70,7 +70,7 @@ const projects = [
     category: "residential",
     title: "Neo-Classical Villa",
     tag: "Residential Design",
-    badge: "Concept",
+
     image:
       "https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&w=1171&q=80",
     description:
@@ -92,7 +92,7 @@ const projects = [
     category: "residential",
     title: "Modern Minimalist House",
     tag: "Residential Design",
-    badge: "Concept",
+
     image:
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
     description:
@@ -114,7 +114,7 @@ const projects = [
     category: "residential",
     title: "Traditional Nepali Heritage House",
     tag: "Residential Design",
-    badge: "Concept",
+
     image:
       "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
     description:
@@ -136,7 +136,7 @@ const projects = [
     category: "commercial",
     title: "Boutique Hotel & Resort",
     tag: "Commercial Design",
-    badge: "Coming Soon",
+
     image:
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
     description:
@@ -158,7 +158,7 @@ const projects = [
     category: "sustainable",
     title: "Eco-Friendly School Campus",
     tag: "Sustainable Design",
-    badge: "Green Design",
+
     image:
       "https://images.unsplash.com/photo-1671706466693-28fb04684694?q=80&w=1332&auto=format&fit=crop",
     description:
@@ -180,7 +180,7 @@ const projects = [
     category: "infrastructure",
     title: "Community Health Center",
     tag: "Infrastructure",
-    badge: "Future Project",
+
     image:
       "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
     description:
@@ -202,7 +202,7 @@ const projects = [
     category: "industrial",
     title: "Agro-Processing & Cold Storage",
     tag: "Industrial Design",
-    badge: "Concept",
+
     image:
       "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
     description:
@@ -224,7 +224,7 @@ const projects = [
     category: "commercial",
     title: "Corporate Office Tower",
     tag: "Commercial Design",
-    badge: "Coming Soon",
+
     image:
       "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
     description:
@@ -246,7 +246,7 @@ const projects = [
     category: "sustainable",
     title: "Urban Drainage & Flood Mitigation",
     tag: "Sustainable Design",
-    badge: "Future Project",
+
     image:
       "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80",
     description:

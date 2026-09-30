@@ -36,7 +36,6 @@ export default function Projects() {
     >
       <div className="project-image">
         <img src={item.image} alt={item.title} />
-        <span className="concept-badge">{item.badge}</span>
       </div>
 
       <div className="project-content">
