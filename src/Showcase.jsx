@@ -1,18 +1,23 @@
+import { useState, useMemo } from "react";
 import showCaseData from "../src/data/SHOWCASE.JS";
 import "./showcase.css";
 
 export default function Showcase() {
-  const randomImages = [...showCaseData]
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 20);
+  const [previewImage, setPreviewImage] = useState(null);
+
+  const randomImages = useMemo(() => {
+    return [...showCaseData]
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 20);
+  }, []);
 
   return (
     <section className="project-gallery">
       <div className="gallery-header">
-        <h2>Our Featured Projects</h2>
+        <h2>Project Showcase</h2>
         <p>
-          Explore a selection of homes and commercial spaces we've proudly
-          built.
+          Explore our collection of Residential, Commercial, and architectural
+          Designs.
         </p>
       </div>
 
@@ -23,9 +28,27 @@ export default function Showcase() {
             src={item.img}
             alt={`House ${item.id}`}
             className="gallery-photo"
+            onClick={() => setPreviewImage(item.img)}
           />
         ))}
       </div>
+
+      {previewImage && (
+        <div className="preview-modal" onClick={() => setPreviewImage(null)}>
+          <button
+            className="close-button"
+            onClick={() => setPreviewImage(null)}
+          >
+            ×
+          </button>
+          <img
+            src={previewImage}
+            alt="Preview"
+            className="preview-image"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </section>
   );
 }

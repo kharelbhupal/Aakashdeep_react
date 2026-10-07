@@ -1,4 +1,7 @@
 import Logo from "./assets/logo.png";
+import { Link } from "react-router-dom";
+import allButtonCategories from "./data/ALLSERVICES_BUTTON.JS";
+import companyLinks from "./data/FOOTER_COMPANY_LINKS.JS";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -31,21 +34,27 @@ export default function Footer() {
             <div className="footer-column">
               <h4>Services</h4>
 
-              <a href="#">Highway Design</a>
-              <a href="#">Bridge Engineering</a>
-              <a href="#">Drainage Solutions</a>
-              <a href="#">Geotechnical Engineering</a>
-              <a href="#">BIM & Digital Twins</a>
+              {allButtonCategories.map((item) => (
+                <a key={item.id} href={`/services#${item.value}`}>
+                  {item.label}
+                </a>
+              ))}
             </div>
 
             <div className="footer-column">
               <h4>Company</h4>
 
-              <a href="#about">About Us</a>
-              <a href="#projects">Projects</a>
-              <a href="#team">Our Team</a>
-              <a href="#contact">Contact</a>
-              <a href="#">Careers</a>
+              {companyLinks.map((item) => (
+                item.link.startsWith("/#") ? (
+                  <a key={item.id} href={item.link}>
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link key={item.id} to={item.link}>
+                    {item.label}
+                  </Link>
+                )
+              ))}
             </div>
 
             <div className="footer-column">

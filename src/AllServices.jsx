@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import allServiceItems from "./data/ALLSERVICE_ITEMS.JS";
 import allButtonCategories from "./data/ALLSERVICES_BUTTON.JS";
 import "./allservice.css";
@@ -7,6 +7,13 @@ import Vastu from "./assets/Vastu.png";
 
 export default function Services() {
   const [activeCategory, setActiveCategory] = useState("engineering");
+
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    if (hash && allButtonCategories.find((cat) => cat.value === hash)) {
+      setActiveCategory(hash);
+    }
+  }, []);
 
   const currentCategory =
     allServiceItems.find((item) => item.category === activeCategory) ||
