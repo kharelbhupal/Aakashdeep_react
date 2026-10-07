@@ -12,7 +12,7 @@ const companyLinks = [
   {
     id: 3,
     label: "Our Team",
-    link: "/about-us",
+    link: "/about-us#team",
   },
   {
     id: 4,
@@ -22,7 +22,7 @@ const companyLinks = [
   {
     id: 5,
     label: "Careers",
-    link: "#",
+    link: "/about-us#careers",
   },
 ];
 

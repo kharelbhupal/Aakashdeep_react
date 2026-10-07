@@ -65,6 +65,7 @@
   flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 4rem;
+  scroll-margin-top: 150px;
 }
 
 .filter-btn {

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   aboutLosses,
   whyAakashdeep,
@@ -11,6 +11,13 @@ import "./about.css";
 
 export default function About() {
   const [activeTab, setActiveTab] = useState("profile");
+
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    if (hash === "team" || hash === "careers") {
+      setActiveTab(hash);
+    }
+  }, []);
 
   const renderTeamCard = (member) => (
     <div className="team-card-large animate-on-scroll">
@@ -61,7 +68,7 @@ export default function About() {
 
       {/* Filters */}
 
-      <div className="container">
+      <div className="container" id="about-filters">
         <div className="about-filters animate-on-scroll">
           {[
             ["team", "Our Team"],
