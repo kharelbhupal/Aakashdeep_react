@@ -23,15 +23,15 @@ export default function Header() {
     <div className="header-container">
       {/* Logo */}
       <div className="navbar-container">
-        <div className="logo-container">
-          <img src={Logo} alt="logo" />
-          <div className="text-group">
-            <Link to={"/"}>
+        <Link to={"/"} className="logo-link">
+          <div className="logo-container">
+            <img src={Logo} alt="logo" />
+            <div className="text-group">
               <span>AAKASHDEEP</span>
               <h2>CONSTRUCTION & ENGINEERING</h2>
-            </Link>
+            </div>
           </div>
-        </div>
+        </Link>
 
         {/* Hidden Checkbox for Hamburger Toggle */}
         <input type="checkbox" id="nav-toggle" className="nav-toggle" />
