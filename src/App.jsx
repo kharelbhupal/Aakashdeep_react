@@ -8,6 +8,8 @@ import AllServices from "./AllServices";
 import Portfolio from "./Portfolio";
 import AboutUs from "./AboutUs";
 import InfoCenter from "./InfoCenter";
+import PrivacyPolicy from "./PrivacyPolicy";
+import TermsAndConditions from "./TermsAndConditions";
 import PageNotFound from "./PageNotFound";
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/info" element={<InfoCenter />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
 

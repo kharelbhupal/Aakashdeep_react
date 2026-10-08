@@ -61,10 +61,10 @@ export default function Footer() {
               <h4>Resources</h4>
 
               <a href="#">Case Studies</a>
-              <a href="#">White Papers</a>
               <a href="#">Blog</a>
               <a href="#">News & Events</a>
-              <a href="#">Privacy Policy</a>
+              <Link to="/privacy-policy">Privacy Policy</Link>
+              <Link to="/terms-and-conditions">Terms & Conditions</Link>
             </div>
           </div>
         </div>
