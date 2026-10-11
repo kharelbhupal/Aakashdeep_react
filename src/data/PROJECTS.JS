@@ -1,35 +1,31 @@
 const PROJECTS = [
   {
-    category: "Bridge Engineering",
-    title: "Riverdale Bridge Replacement",
+    category: "Dairy",
+    title: "Bhaktapur Dairy",
     description:
-      "Design and construction of a 120m composite deck bridge with innovative materials and sustainable design principles.",
-    image:
-      "https://images.unsplash.com/photo-1560791716-49baa22780b0?q=80&w=1170&auto=format&fit=crop",
+      "Constructed a warehouse for Bhaktapur Dairy and carried out structural assessment to evaluate the building's structural integrity, safety, and stability.",
+    image: "/front/dairy.jpeg",
   },
   {
-    category: "Highway Design",
-    title: "Junction Upgrade",
+    category: "Modern Design",
+    title: "Modern Design",
     description:
-      "Complete redesign and signal optimization of a major motorway junction, improving traffic flow by 40%.",
-    image:
-      "https://plus.unsplash.com/premium_photo-1681929369969-b47cfe58e354?q=80&w=626&auto=format&fit=crop",
+      "Constructed a modern residence featuring clean architectural lines, contemporary aesthetics, functional spaces, and a perfect balance of style, comfort, and practicality.",
+    image: "/front/modern.jpeg",
   },
   {
-    category: "Drainage & Flood",
-    title: "Eastside Drainage Tunnel",
+    category: "Neo House",
+    title: "Neo Classical House",
     description:
-      "3km drainage tunnel and pump-station design to mitigate flooding in a high-risk urban area.",
-    image:
-      "https://images.unsplash.com/photo-1530424257364-cd52a3e9bd40?q=80&w=880&auto=format&fit=crop",
+      "Constructed a luxurious neo-classical residence featuring elegant architectural details, timeless aesthetics, and a harmonious blend of classic grandeur and modern comfort.",
+    image: "/front/neo.jpeg",
   },
   {
-    category: "Commercial Development",
-    title: "Skyline Business Complex",
+    category: "Hospital",
+    title: "Om Health Campus",
     description:
-      "Structural design, BIM coordination, and foundation engineering for a 15-story mixed-use commercial complex, ensuring safety, efficiency, and sustainable construction.",
-    image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop",
+      "Conducted geotechnical investigation, structural assessment, and non-destructive testing (NDT) at the OHM Hospital campus to evaluate soil conditions, structural integrity, and the overall condition of the existing buildings.",
+    image: "/front/ohm.jpeg",
   },
 ];
 
